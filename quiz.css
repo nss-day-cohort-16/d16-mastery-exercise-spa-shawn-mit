@@ -1,0 +1,33 @@
+
+
+
+.container {
+
+margin: 5em;
+
+}
+
+.row {
+
+border : solid black;
+margin : 5em;
+padding:  5em;
+
+}
+
+.col-sm-4 {
+
+  border: 0.5px solid red;
+  margin: 5em;
+  padding : 5em;
+}
+
+nav {
+	background-color: : #e3f2fd;
+
+
+}
+
+
+
+

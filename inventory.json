@@ -1,0 +1,30 @@
+{
+  "cars": [
+    {
+      "make": "Toyota",
+      "model": "Supra Turbo",
+       "year": "1991",
+      "price": "100,000",
+      "description": "Slow down Paul Walker.",
+    },
+    {
+      "make": "Dodge",
+      "model": "Sprinter",
+      "year": "1983",
+      "price": "100",
+      "description": "This is a one of a kind formerly  used to silence journalists and protesters during the 2016 presidential election.",
+    },
+    {
+
+      "make": "Oldsmobile",
+      "model": "Cutluss Supreme",
+      "year": "1979",
+      "price": "1,000,000",
+      "description": "A supreme machine for a supreme being, super supreme."
+    }
+  ]
+}
+
+
+
+
