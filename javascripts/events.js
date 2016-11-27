@@ -17,7 +17,7 @@ var CarLot = (function(eventCarLot) {
             // cycle through cards applying an eventlistener as they're clicked.
 
             cards[c].addEventListener("click", function() {
-
+            		//execute functions inside loop for on Click to cycle through events
                 // remove border of cards
                 eventCarLot.removeBorder(this);
 

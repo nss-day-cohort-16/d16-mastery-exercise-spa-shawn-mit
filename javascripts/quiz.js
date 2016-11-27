@@ -19,7 +19,7 @@ function populatePage(inventoryJSON) {
         }
 
 
-        autoDiv +=`<div class = "col-md-4 productCards" id = "col${i}">
+        autoDiv +=`<div class = "col-md-4 productCards">
 
 				<h3> ${getCars.make} </h3>
 				<h3> ${getCars.model} </h3>
