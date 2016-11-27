@@ -4,26 +4,31 @@
 
 var CarLot = (function () {
   
-  var inventory = [];
+  var inventoryJSON = [];
 
   return {
+
     loadInventory: function (populatePage) {
       var inventoryLoader = new XMLHttpRequest();
-      		inventoryLoader.open("GET", "inventory.json");          
+      		inventoryLoader.open("GET", 'javascripts/inventory.json');          
       		inventoryLoader.send();
-                //console.log("check",inventory);
+               // console.log("check", inventory);
 
           //grab JSON data and set data variable to parse object
-          inventoryLoader.addEventListener("load", function () {
-      		var data = JSON.parse(event.target.responseText).cars;
-       		
+          inventoryLoader.addEventListener("load", function()  {
+      		//fill inventory array with parsed JSON objects
+          inventoryJSON = JSON.parse(event.target.responseText).cars;
+           populatePage(inventoryJSON);
+
       });
-          populatePage(inventory);
+
+
     },
 
-    getInventory: function () {
-      return inventory;
+      getInventory: function () {
+      return inventoryJSON;
     }
+    
 
   };
 

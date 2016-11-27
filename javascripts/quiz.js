@@ -2,29 +2,29 @@
 
 
 
-function populatePage(inventory) {
+function populatePage(inventoryJSON) {
     var container = document.getElementById("container");
-    var carsDiv = '';
+    //here is my counter variable
+     var autoDiv = "";
 
     // Loop over the inventory and populate the page
-    for (var i = 0; i < inventory.length; i++) {
+    for (var i = 0; i < inventoryJSON.length; i++) {
 
-        var getCars = inventory[i];
+        var getCars = inventoryJSON[i];
         //wireframe actual card onto DOM 
         // first if statement to begin every 3 columns break into new row.
         if (i % 3 === 0) {
             //literal notation w/ticks
-           carsDiv += `<div class = "row">`;
+           autoDiv += `<div class = "row">`;
         }
 
 
-        carsDiv +=
-            `<div class = "col-md-3 productCard">
+        autoDiv +=`<div class = "col-md-4 productCards" id = "col${i}">
 
 				<h3> ${getCars.make} </h3>
 				<h3> ${getCars.model} </h3>
 				<h3> ${getCars.year} </h3>
-				<h3 class = "description"> ${getCars.description} </h3>
+				<h3 class = "desc"> ${getCars.description} </h3>
 				<h3> ${getCars.price} </h3>
 
 			</div>`;
@@ -33,17 +33,20 @@ function populatePage(inventory) {
 
         if ((i + 1) % 3 === 0) {
 
-            carsDiv += `</div>`;
+         autoDiv += `</div>`;
+
         }
 
+    	container.innerHTML += autoDiv;
+
+        //console.log("check", autoDiv);
     } //end of for loop iteration over product cards 
 
     //now plaster the product cards into the DOM
-    	container.innerHTML += carsDiv;
 
     // Now that the DOM is loaded, establish all the event listeners needed
 
-    //CarLot.activateEvents();
+    CarLot.activateEvents();
 }
 
 // Load the inventory and send a callback function to be
